@@ -1,0 +1,395 @@
+$breakpoint-xxxlarge: 1919px;
+$breakpoint-xxlarge: 1440px;
+$breakpoint-xlarge: 1200px;
+$breakpoint-large: 1024px;
+$breakpoint-medium: 768px;
+$breakpoint-small: 576px;
+$breakpoint-xsmall: 375px;
+
+.wrapper {
+    &__button {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        justify-content: space-between;
+        background-color: initial;
+        cursor: pointer;
+
+        &:hover .wrapper__button__title__number {
+            transform: translateY(-120%);
+          }
+      
+          &:hover .wrapper__button__title__cloneNumber {
+            transform: translateY(-155%);
+          }
+
+        &__title {
+            position: relative;
+            font-size: 1.41rem;
+            font-weight: 400;
+            color: var(--text-black);
+            padding: 4px 0px;
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+            padding-bottom: 0.4rem;
+            overflow: hidden;
+
+            &__number {
+                position: relative;
+                font-size: 1.05rem;
+                font-weight: 350;
+                transition: transform 0.2s ease;
+                color: var(--dark-text);
+            }
+
+            &__cloneNumber {
+                position: absolute;
+                top: 100%;
+                color: var(--dark-text);
+            }
+        }
+    }
+
+    &__descriptionWrapper {
+        overflow: hidden;
+        transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out;
+        padding-top: 0;
+        padding-bottom: 0;
+
+        &.open {
+            padding-top: 2rem;
+        }
+
+        &__description {
+            padding: 0;
+            font-weight: 350;
+            font-size: 1.05rem;
+            color: var(--dark-text);
+        }
+    }
+}
+
+
+
+
+
+
+//max-width:375px 
+@media screen and (max-width: $breakpoint-xsmall) {
+    .wrapper {
+        padding-bottom: 0.3rem;
+        &__button {
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            gap: 1rem;
+
+            &:hover .wrapper__button__numberWrapper__number {
+                transform: translateY(-120%);
+            }
+
+            &:hover .wrapper__button__numberWrapper__cloneNumber {
+                transform: translateY(-120%);
+            }
+
+            &__title{
+                font-size: 1.17rem;
+            }
+
+            &__numberWrapper{
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                width: 100%;
+                overflow: hidden;
+                &__number {
+                    position: relative;
+                    font-size: 0.94rem;
+                    font-weight: 350;
+                    transition: transform 0.2s ease;
+                    color: var(--dark-text);
+                }
+    
+                &__cloneNumber {
+                    position: absolute;
+                    left: 0;
+                    top: 100%;
+                    color: var(--dark-text);
+                    font-size: 0.94rem;
+                }
+            }
+    }
+}
+}
+
+// min-width:376px and max-width: 576px
+@media screen and (min-width: $breakpoint-xsmall) and (max-width: $breakpoint-small) {
+    .wrapper {
+        padding-bottom: 0.3rem;
+        &__button {
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            gap: 1rem;
+
+            &:hover .wrapper__button__numberWrapper__number {
+                transform: translateY(-120%);
+            }
+
+            &:hover .wrapper__button__numberWrapper__cloneNumber {
+                transform: translateY(-120%);
+            }
+
+            &__title{
+                font-size: 1.17rem;
+            }
+
+            &__numberWrapper{
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                width: 100%;
+                overflow: hidden;
+                &__number {
+                    position: relative;
+                    font-size: 0.94rem;
+                    font-weight: 350;
+                    transition: transform 0.2s ease;
+                    color: var(--dark-text);
+                }
+    
+                &__cloneNumber {
+                    position: absolute;
+                    left: 0;
+                    top: 100%;
+                    color: var(--dark-text);
+                    font-size: 0.94rem;
+                }
+            }
+    }
+}
+}
+
+// min-width 576px and max-width: 768px
+@media screen and (min-width: $breakpoint-small) and (max-width: $breakpoint-medium) {
+    .wrapper {
+        padding-bottom: 0.3rem;
+        &__button {
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            gap: 1rem;
+
+            &:hover .wrapper__button__numberWrapper__number {
+                transform: translateY(-120%);
+            }
+
+            &:hover .wrapper__button__numberWrapper__cloneNumber {
+                transform: translateY(-120%);
+            }
+
+            &__numberWrapper{
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                width: 100%;
+                overflow: hidden;
+                &__number {
+                    position: relative;
+                    font-size: 1.05rem;
+                    font-weight: 350;
+                    transition: transform 0.2s ease;
+                    color: var(--dark-text);
+                }
+    
+                &__cloneNumber {
+                    position: absolute;
+                    left: 0;
+                    top: 100%;
+                    color: var(--dark-text);
+                }
+            }
+    }
+}
+}
+
+//min-width: 768px and max-width: 1024px
+@media screen and (min-width: $breakpoint-medium) and (max-width: ($breakpoint-large - 1)) {
+    .wrapper {
+        padding-bottom: 0.3rem;
+        &__button {
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            gap: 1rem;
+
+            &:hover .wrapper__button__numberWrapper__number {
+                transform: translateY(-120%);
+            }
+
+            &:hover .wrapper__button__numberWrapper__cloneNumber {
+                transform: translateY(-120%);
+            }
+
+            &__numberWrapper{
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                width: 100%;
+                overflow: hidden;
+                &__number {
+                    position: relative;
+                    font-size: 1.05rem;
+                    font-weight: 350;
+                    transition: transform 0.2s ease;
+                    color: var(--dark-text);
+                }
+    
+                &__cloneNumber {
+                    position: absolute;
+                    left: 0;
+                    top: 100%;
+                    color: var(--dark-text);
+                }
+            }
+    }
+}
+}
+
+// min-width 1024px and max-width: 1200px
+@media screen and (min-width: $breakpoint-large) and (max-width: $breakpoint-xlarge) {
+    .wrapper {
+        padding-bottom: 0.3rem;
+        &__button {
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            gap: 1rem;
+
+            &:hover .wrapper__button__numberWrapper__number {
+                transform: translateY(-120%);
+            }
+
+            &:hover .wrapper__button__numberWrapper__cloneNumber {
+                transform: translateY(-120%);
+            }
+
+            &__numberWrapper{
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                width: 100%;
+                overflow: hidden;
+                &__number {
+                    position: relative;
+                    font-size: 1.05rem;
+                    font-weight: 350;
+                    transition: transform 0.2s ease;
+                    color: var(--dark-text);
+                }
+    
+                &__cloneNumber {
+                    position: absolute;
+                    left: 0;
+                    top: 100%;
+                    color: var(--dark-text);
+                }
+            }
+    }
+}
+}
+
+// min-width 1200px and max-width: 1440px
+@media screen and (min-width: $breakpoint-xlarge) and (max-width: $breakpoint-xxlarge) {
+    .wrapper {
+        padding-bottom: 0.3rem;
+        &__button {
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            gap: 1rem;
+
+            &:hover .wrapper__button__numberWrapper__number {
+                transform: translateY(-120%);
+            }
+
+            &:hover .wrapper__button__numberWrapper__cloneNumber {
+                transform: translateY(-120%);
+            }
+
+            &__numberWrapper{
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                width: 100%;
+                overflow: hidden;
+                &__number {
+                    position: relative;
+                    font-size: 1.05rem;
+                    font-weight: 350;
+                    transition: transform 0.2s ease;
+                    color: var(--dark-text);
+                }
+    
+                &__cloneNumber {
+                    position: absolute;
+                    left: 0;
+                    top: 100%;
+                    color: var(--dark-text);
+                }
+            }
+    }
+}
+}
+
+
+// min-width 1440px and max-width: 1919px
+@media screen and (min-width: $breakpoint-xxlarge) and (max-width: $breakpoint-xxxlarge) {
+    .wrapper {
+        padding-bottom: 0.3rem;
+        &__button {
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            gap: 0.5rem;
+
+            &:hover .wrapper__button__numberWrapper__number {
+                transform: translateY(-120%);
+            }
+
+            &:hover .wrapper__button__numberWrapper__cloneNumber {
+                transform: translateY(-120%);
+            }
+
+            &__numberWrapper{
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                width: 100%;
+                overflow: hidden;
+                &__number {
+                    position: relative;
+                    font-size: 1.05rem;
+                    font-weight: 350;
+                    transition: transform 0.2s ease;
+                    color: var(--dark-text);
+                }
+    
+                &__cloneNumber {
+                    position: absolute;
+                    left: 0;
+                    top: 100%;
+                    color: var(--dark-text);
+                }
+            }
+    }
+}
+}
